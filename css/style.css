@@ -22,3 +22,9 @@
     display: flex;
     justify-content: center;
   }
+  .topbar-center {
+    font-family: sans-serif;
+    flex: 0.7;
+    display: flex;
+    justify-content: center;
+  }

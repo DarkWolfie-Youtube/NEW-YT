@@ -2,4 +2,6 @@
  DarkWolfie remakes the YouTube Website from scratch
 
 
- If you want to stay updated on this project, please look below.
+ If you want to stay updated on this project, please look below for the videos on the project
+ # Videos
+    
