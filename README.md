@@ -1,2 +1,5 @@
 # NEW-YT
- DarkWolfie remates the YouTube Website
+ DarkWolfie remakes the YouTube Website from scratch
+
+
+ If you want to stay updated on this project, please look below.
