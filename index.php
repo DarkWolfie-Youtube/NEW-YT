@@ -16,12 +16,12 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="logo">
+    <div class="topbar">
+        <div class="topbar-left">
             <a href="index.php"><img src="images/logo.png" alt="WolfTube" width="124" height="32"></a>
         </div>
        
-        <div class="search">
+        <div class="topbar-center">
             <form action="search.php" method="GET">
                 <input type="text" name="query">
                 <input type="submit" value="Search">
