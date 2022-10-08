@@ -1,0 +1,2 @@
+RewriteEngine on
+RewriteRule ^/watch /watch.php?vid=

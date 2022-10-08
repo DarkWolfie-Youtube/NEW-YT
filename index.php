@@ -14,6 +14,7 @@
 <meta name="author" content="DarkWolfie">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
     <div class="topbar">
@@ -23,13 +24,16 @@
        
         <div class="topbar-center">
             <form action="search.php" method="GET">
-                <input type="text" name="query">
-                <input type="submit" value="Search" width=>
+                <input type="text" name="query" width="510" height="30"> 
+                <input type="submit" value="Search">   
             </form>
         </div>
         <div class="topbar-right">
-            <a href="upload.php">Upload</a>
-            <a href="login.php">Login</a>
+            <a href="upload.php"><button type="button" class="btn btn-primary btn-sm">Upload</button></a>
+            <a href="login.php"><button type="button" class="btn btn-primary btn-sm">Sign In</button></a>
+            
     </div>
+    
+</div>
 </body>
 </html>

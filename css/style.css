@@ -17,7 +17,7 @@
   }
   .topbar-left {
     display: flex;
-    flex: 0.13;
+    flex: 0.14;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -27,4 +27,9 @@
     flex: 0.7;
     display: flex;
     justify-content: center;
+  }
+  .topbar-right {
+    flex: 0.13;
+    display: flex;
+    justify-content: flex-end;
   }
