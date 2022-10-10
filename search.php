@@ -20,21 +20,14 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<br>  id: ". $row["id"]. ' - channel_id:  '. $row["channel_id"]. "  - video_uri: " . $row["video_uri"] . " - video_thumbnail_URL: " . $row["video_thumbnail_URL"] . "<br>";
        print_r($row);
-       setcookie("ID", $row['channel_id'], time() + (86400 * 30), "/");
-    }
-} else {
-    echo "0 results";
-}
-$row = $result->fetch_assoc();
-
-
+       
 $conn2 = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn2->connect_error) {
     die("Connection failed: " . $conn2->connect_error);
 }
 
-$sql2 = "SELECT id, channel_name, join_date, verified, channel_pfp FROM channels WHERE id = '".$_COOKIE['ID']."'";
+$sql2 = "SELECT id, channel_name, join_date, verified, channel_pfp FROM channels WHERE id = '".$row['channel_id']."'";
 
 $result2 = $conn2->query($sql2);
 
@@ -47,6 +40,15 @@ if ($result2->num_rows > 0) {
 } else {
     echo "0 results";
 }
+$conn2->close();
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+
 
 
 
@@ -60,7 +62,7 @@ if ($result2->num_rows > 0) {
 
 
 $conn->close();
-$conn2->close();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -72,7 +74,7 @@ $conn2->close();
         <meta name="author" content="DarkWolfie">
         <title>WolfTube</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     </head>
     </html>
 

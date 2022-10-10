@@ -396,3 +396,11 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+#videos
+*.mp4
+/test
+
+#ignore the .git files
+.gitignore
+.gitattributes
