@@ -13,7 +13,10 @@ const volumeSlider = document.querySelector(".volume-slider")
 const videoContainer = document.querySelector(".video-container")
 const timelineContainer = document.querySelector(".timeline-container")
 const video = document.querySelector("video")
-
+const queryString = window.location.search;
+console.log(queryString);
+const urlParams = new URLSearchParams(queryString);
+const videoId = urlParams.get('v')
 document.addEventListener("keydown", e => {
   const tagName = document.activeElement.tagName.toLowerCase()
 
@@ -52,6 +55,7 @@ document.addEventListener("keydown", e => {
 })
 
 // Timeline
+
 timelineContainer.addEventListener("mousemove", handleTimelineUpdate)
 timelineContainer.addEventListener("mousedown", toggleScrubbing)
 document.addEventListener("mouseup", e => {
@@ -75,7 +79,8 @@ function toggleScrubbing(e) {
     video.currentTime = percent * video.duration
     if (!wasPaused) video.play()
   }
-
+   
+   
   handleTimelineUpdate(e)
 }
 
@@ -86,7 +91,7 @@ function handleTimelineUpdate(e) {
     1,
     Math.floor((percent * video.duration) / 10)
   )
-  const previewImgSrc = `assets/previewImgs/preview${previewImgNumber}.jpg`
+  const previewImgSrc = `https://images.darksmp.com/${videoId}/preview${previewImgNumber}.jpg`
   previewImg.src = previewImgSrc
   timelineContainer.style.setProperty("--preview-position", percent)
 
@@ -95,6 +100,9 @@ function handleTimelineUpdate(e) {
     thumbnailImg.src = previewImgSrc
     timelineContainer.style.setProperty("--progress-position", percent)
   }
+
+  
+
 }
 
 // Playback Speed
@@ -119,6 +127,7 @@ video.addEventListener("timeupdate", () => {
   const percent = video.currentTime / video.duration
   timelineContainer.style.setProperty("--progress-position", percent)
 })
+
 
 const leadingZeroFormatter = new Intl.NumberFormat(undefined, {
   minimumIntegerDigits: 2,

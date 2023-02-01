@@ -170,10 +170,11 @@ video {
 }
 
 .timeline {
-  background-color: rgba(100, 100, 100, .5);
+  background-color: rgba(121, 121, 121, 0.5);
   height: 3px;
   width: 100%;
-  position: relative
+  position: relative;
+  
 }
 
 .timeline::before {

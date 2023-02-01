@@ -4,7 +4,19 @@ $servername = "localhost";
 $username = "youtube";
 $password = "password";
 $dbname = "wolftube";
-print_r($_GET);
+
+// We need to use sessions, so you should always start sessions using the below code.
+session_start();
+// If the user is not logged in redirect to the login page...
+if (!isset($_SESSION['loggedin'])) {
+	require('topbar.php');
+} else {
+    require('topbar-loggedin.php');
+}
+session_abort();
+
+
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -18,8 +30,12 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<br>  id: ". $row["id"]. ' - channel_id:  '. $row["channel_id"]. "  - video_uri: " . $row["video_uri"] . " - video_thumbnail_URL: " . $row["video_thumbnail_URL"] . "<br>";
-       print_r($row);
+        //make a youtube style video card
+        echo "<a href='watch.php?v=".$row['id']."' class=''><div class='card-search' style='width: 18rem;'>
+        <img src='".$row['video_thumbnail_URL']."' class='card-img-top' alt='...'>
+        <div class='card-body'>
+        <h5 class='card-search-title'>".$row['video_name']."</h5>
+          ";
        
 $conn2 = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -34,7 +50,15 @@ $result2 = $conn2->query($sql2);
 if ($result2->num_rows > 0) {
     // output data of each row
     while($row = $result2->fetch_assoc()) {
-        echo "<br>  id: ". $row["id"]. " - channel_name:  ". $row["channel_name"]. " - join_date: " . $row["join_date"] . " - verified: " . $row["verified"] . " - channel_pfp: " . $row["channel_pfp"] . "<br>";
+        
+        //make a div element to contain channel PFP username and verified tag
+        echo "<br><div class='channel-info'>";
+        echo "<img src='".$row['channel_pfp']."' class='channel-pfp'>";
+        echo "<div class='channel-name'>".$row['channel_name']."</div>";
+        if($row['verified'] == 1){
+            echo '<div class="verified-tag"><i class="bi bi-check-circle-fill"></i></div>';
+        }
+        echo "</div> </div></a>";
        
     }
 } else {
@@ -73,8 +97,9 @@ $conn->close();
         <meta name="keywords" content="WolfTube, YouTube, Video">
         <meta name="author" content="DarkWolfie">
         <title>WolfTube</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/search.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     </head>
     </html>
 

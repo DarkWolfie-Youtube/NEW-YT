@@ -1,2 +1,5 @@
-RewriteEngine on
-RewriteRule ^/watch /watch.php?vid=
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+</IfModule>

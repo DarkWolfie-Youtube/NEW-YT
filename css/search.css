@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(49, 49, 49);
+    font-family: 'Muli', sans-serif;
+    overflow: hidden;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+}
+
+.verified-tag {
+    -webkit-text-fill-color: gray;
+}
+.channel-pfp{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.channel-name{
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.channel-info{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.channel-info p{
+    font-size: 15px;
+    margin: 0 10px;
+}
+.card-search {
+    background-color: rgb(37, 36, 36);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width:auto;
+}
+
+.card-search:hover{
+    background-color: rgb(43, 43, 43);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.card-search-title{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 10px;
+}
+

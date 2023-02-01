@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+
 * {
     margin: 0;
     color: white;
@@ -6,14 +9,16 @@
   body {
     overflow: hidden;
     background-color: rgb(49, 49, 49);
+    font-family: 'Dosis', sans-serif;
   }
 
   .topbar {
     width: 100%;
-    height: 61px;
+    height: 35px;
     background-color: rgb(49, 49, 49);
     display: flex;
     align-items: center;
+    font-family: 'Dosis', sans-serif;
   }
   .topbar-left {
     display: flex;
@@ -33,8 +38,100 @@
     display: flex;
     justify-content: flex-end;
   }
+  .search-bar{
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    border: none;
+    
+    background-color: rgb(49, 49, 49);
+    color: rgb(105, 105, 105);
+  }
 
   .search-bar:focus{
     outline: none;
   }
+  .butn {
+    
+    width: 50px;
+    height: 33px;
+    border: 1px solid #3d3d3d;
+    border-left: 0;
   
+    right: 0;
+    border-radius: 0px 2px 2px 0;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    background-color: #353535;
+    z-index: 1
+  }
+  .search-bar-new{
+    width: 75%;
+    max-width: 400px;
+    height: 33px;
+    background-color: #353535;
+    border: 1px solid #585858;
+    padding-top: 3px;
+  }
+  .butn:hover {
+    background-color: #747474;
+    box-shadow: 0 1px 1px rgba(0,0,0,.15),
+      inset 0 0 2px rgba(0,0,0,.05);
+    transition: all .07s ease-in-out
+  }
+  .channel-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+  .channel-row-left{
+    flex: 0.2;
+    display: flex;
+    justify-content: center;
+  }
+  .channel-row-center{
+    flex: 0.6;
+    display: flex;
+    justify-content: center;
+  }
+  .channel-row-right{
+    flex: 0.2;
+    display: flex;
+    justify-content: center;
+  }
+  .channel-row-right button{
+    background-color: #353535;
+    border: 1px solid #585858;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .verified-tag{
+    color: #6d6d6d;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 20px;
+  }
+  .channel-sub-count{
+    color: #acacac;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 20px;
+  }
+  .video-container-padding{
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  .video-info{
+    padding-left: 20px;
+  }
+ .views-date{
+    font-size: 18px;
+    margin-bottom: 5px;
+    -webkit-text-fill-color: #6d6d6d;
+    color: #6d6d6d;
+  }

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "videojs-chromecast": "^2.0.8",
+    "videojs-replay": "^1.1.0"
+  }
+}

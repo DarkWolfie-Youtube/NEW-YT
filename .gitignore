@@ -404,3 +404,4 @@ FodyWeavers.xsd
 #ignore the .git files
 .gitignore
 .gitattributes
+/phpMyAdmin
