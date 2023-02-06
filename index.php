@@ -48,7 +48,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         //make a youtube style video card
         echo "<div class='card' style='display: inline-block;max-width: 400px; background-color: black;'><a href='watch?v=".$row['id']."' class=''>
-        <div class='card-search' style='width: 18rem;'>
+        <div class='card-search'>
         <img src='https://images.darksmp.com/".$row['id']."/thumb.png' class='card-img-top' alt='wooo' width='320' height='240'>
         <div class='card-body'>
         <h5 class='card-search-title' style='font-size: 24px;'>".$row['video_name']."</h5>
@@ -92,5 +92,28 @@ $conn->close();
 ?>
 </div>
 </div>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyD8p2wy9ftIXyYE_vj2xYKdkqQBc3K8e_I",
+    authDomain: "wolftube-6e83a.firebaseapp.com",
+    projectId: "wolftube-6e83a",
+    storageBucket: "wolftube-6e83a.appspot.com",
+    messagingSenderId: "352393340794",
+    appId: "1:352393340794:web:054ad922ff6fee004a98c3",
+    measurementId: "G-YXEMK6MPD7"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>

@@ -2,5 +2,26 @@
   "dependencies": {
     "videojs-chromecast": "^2.0.8",
     "videojs-replay": "^1.1.0"
-  }
+  },
+  "name": "wolftube",
+  "description": "DarkWolfie remakes the YouTube Website from scratch",
+  "version": "0.0.1",
+  "main": ".",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Please open XAMPP\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkWolfie-Youtube/NEW-YT.git"
+  },
+  "author": "DarkWolfie37",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkWolfie-Youtube/NEW-YT/issues"
+  },
+  "homepage": "https://github.com/DarkWolfie-Youtube/NEW-YT#readme"
 }

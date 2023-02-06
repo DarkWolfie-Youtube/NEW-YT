@@ -405,3 +405,8 @@ FodyWeavers.xsd
 .gitignore
 .gitattributes
 /phpMyAdmin
+
+
+#ignore node
+package.json
+
