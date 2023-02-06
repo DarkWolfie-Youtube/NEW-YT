@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "firebase": "^9.17.1",
+    "firebaseui": "^6.0.2",
     "videojs-chromecast": "^2.0.8",
     "videojs-replay": "^1.1.0"
   },
@@ -10,7 +12,6 @@
   "directories": {
     "test": "test"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Please open XAMPP\""
   },
