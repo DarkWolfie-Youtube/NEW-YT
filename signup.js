@@ -34,7 +34,8 @@ var password = document.getElementById("pass").value
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
-    const user = userCredential.user;
+    const user = userCredential.user.uid;
+    window.location.assign("../login/auth?user=" + user)
     // ...
   })
   .catch((error) => {
@@ -42,7 +43,7 @@ createUserWithEmailAndPassword(auth, email, password)
     const errorMessage = error.message;
     // ..
   });
-  
+
 
 }
 

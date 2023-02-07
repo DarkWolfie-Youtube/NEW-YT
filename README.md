@@ -6,6 +6,6 @@
  # Videos
  Currently there is no videos.
 
-# Why cant i see the page...
-Github pages doesnt allow for php websites to be seen. :eyes:
+ # Why cant i see the page...
+ Github pages doesnt allow for php websites to be seen. :eyes:
     
